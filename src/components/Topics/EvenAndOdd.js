@@ -44,3 +44,5 @@ class EvenAndOdd extends Component {
 }
 
 export default EvenAndOdd;
+
+//is parseInt(, 10) making it so the string is turned into a number and that number is always base 10?? 

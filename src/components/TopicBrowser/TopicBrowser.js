@@ -23,3 +23,5 @@ class TopicBrowser extends Component {
 }
 
 export default TopicBrowser;
+
+//so what's the point of this file? couldn't we have done all of this in App.js??

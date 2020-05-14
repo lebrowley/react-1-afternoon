@@ -5,19 +5,35 @@ class FilterString extends Component {
         super();
 
         this.state= {
-            names: ['james', 'jessica', 'melody', 'tyler', 'blake', 'jenny', 'mark', 'maddy'],
+            names: ['James', 'Jessica', 'Melody', 'Tyler', 'Blake', 'Jenny', 'Mark', 'Maddy'],
             userInput: '',
             filteredNames: []
     };
 } 
+
+handleChange(val){
+    this.setState({userInput: val})
+}
+
+filteredNames(userInput){
+    let names = this.state.names;
+    let filteredNames = [];
+
+    for(let i=0; i < names.length; i++){
+        if(names[i].includes(userInput)){
+            filteredNames.push(names[i])
+        }
+    }
+    this.setState({filteredNames: filteredNames})
+}
 
     render() {
         return(
             <div className='puzzleBox filterString PB'>
                 <h4>Filter String</h4>
                 <span className='puzzleText'> Names: {JSON.stringify(this.state.names, null, 10)}</span>
-                <input className='inputLine' />
-                <button className='confirmationButton'></button>
+                <input className='inputLine' onChange={ (e) => this.handleChange(e.target.value) }/>
+                <button className='confirmationButton' onClick={ (e) => this.filteredNames(this.state.userInput) }>Filter</button>
                 <span className='resultsBox filterStringRB'>Filtered Names: {JSON.stringify(this.state.filteredNames, null, 10)}</span>
             </div>
         )
@@ -26,6 +42,3 @@ class FilterString extends Component {
 
 export default FilterString;
 
-
-
-// ['happy', 'go', 'lucky', 'early', 'bird', 'gets', 'the', 'worm']
