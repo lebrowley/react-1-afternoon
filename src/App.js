@@ -12,5 +12,3 @@ class App extends Component {
 
 export default App;
 
-
-//is this type of file (the main parent) usually called App.js? are there other ways of naming that would be more informative? 

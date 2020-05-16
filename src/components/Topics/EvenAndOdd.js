@@ -11,8 +11,8 @@ class EvenAndOdd extends Component {
         }
     }
 
-    handleChange(val){
-        this.setState({ userInput: val });
+    handleChange(value){
+        this.setState({ userInput: value });
     }
 
     assignEvenAndOdds(userInput){
@@ -45,4 +45,4 @@ class EvenAndOdd extends Component {
 
 export default EvenAndOdd;
 
-//is parseInt(, 10) making it so the string is turned into a number and that number is always base 10?? 
+//is parseInt(, 10) making it so the string is turned into a number and that number is always base 10 
